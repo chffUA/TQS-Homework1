@@ -22,11 +22,11 @@ public class APITest {
     
     Client client;
     WebTarget target;
-    String link = "http://localhost:8080/TQS_HW1/api/convert/get?from=AUD&to=USD&amount=400.27";
+    String link = "http://localhost:8080/TQS-Homework1-master/api/convert/get?from=AUD&to=USD&amount=400.27";
     
     Client client2;
     WebTarget target2;
-    String link2 = "http://localhost:8080/TQS_HW1/api/convert/get?from=AUD&to=U&amount=400.27";
+    String link2 = "http://localhost:8080/TQS-Homework1-master/api/convert/get?from=AUD&to=U&amount=400.27";
     
     @Before
     public void initClient() {
