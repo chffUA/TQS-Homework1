@@ -24,7 +24,7 @@ public class FunctionalTest {
 
   @Test
   public void testUntitledTestCase() throws Exception {
-    driver.get("http://localhost:8080/TQS_HW1/faces/index.xhtml");
+    driver.get("http://localhost:8080/TQS-Homework1-master/faces/index.xhtml");
     driver.findElement(By.name("j_idt6:j_idt8")).clear();
     driver.findElement(By.name("j_idt6:j_idt8")).sendKeys("1.01");
     new Select(driver.findElement(By.name("j_idt6:j_idt10"))).selectByVisibleText("BTC");
