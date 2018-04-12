@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Currency Converter</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </h:head>
+    <h:body>
+        <h1 style="text-align: center;">Currency Converter</h1>
+        <h:form role="form" style="text-align: center;">
+            <div class="form-group">
+                <label>Please insert a numerical value:</label>
+                <br />
+                <h:inputText class="form-control" value="#{convBean.amount}" style="text-align: center;"/> 
+                <br /><br/>
+                <label>Converting from:</label>
+                <br />
+                <h:selectOneMenu value="#{convBean.from}">
+                    <f:selectItems value="#{convBean.currencies}" />
+                </h:selectOneMenu>
+                <br /><br/>
+                <label>To:</label>
+                <br />
+                <h:selectOneMenu value="#{convBean.to}">
+                    <f:selectItems value="#{convBean.currencies}" />
+                </h:selectOneMenu>
+                <br /><br/>
+                <h:commandButton value="Submit" action="#{convBean.calculate()}"/>       
+                <br /><br/>
+                <label>That amount is worth <b>#{convBean.resString()} #{convBean.to}</b>.</label>
+                <br/>	
+                </div>
+        </h:form>
+            
+    </h:body>
+</html>
